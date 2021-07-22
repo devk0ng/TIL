@@ -51,7 +51,7 @@ SAGA 패턴에는 두가지가 존재해.  Choreography 방식과 Orchestration 
 
 ### 1. SAGA Choreography
 
-[https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fw5pQl%2FbtqBtFtm7ax%2FEtSFfrFCa9cKsXyrZiIk3k%2Fimg.png](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fw5pQl%2FbtqBtFtm7ax%2FEtSFfrFCa9cKsXyrZiIk3k%2Fimg.png)
+![https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fw5pQl%2FbtqBtFtm7ax%2FEtSFfrFCa9cKsXyrZiIk3k%2Fimg.png](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fw5pQl%2FbtqBtFtm7ax%2FEtSFfrFCa9cKsXyrZiIk3k%2Fimg.png)
 
 Choregoraphy방식은 각각의 서비스가 자신의 local transaction을 관리하고 트랜잭션이 종료되면 완료 event를 발행합니닷!! 그럼 그다음 실행되어야 할 로컬 트랜젝션을 관리하는 App에서는 그 event를 수신받고 다음 작업을 처리하는거지!!
 
@@ -59,7 +59,7 @@ Choregoraphy방식은 각각의 서비스가 자신의 local transaction을 관�
 
 그럼 만약 실패한다면...?? 
 
-[https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbigQxE%2FbtqBujXdUwD%2FULK7mKyfwdmDujlPJj3gcK%2Fimg.png](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbigQxE%2FbtqBujXdUwD%2FULK7mKyfwdmDujlPJj3gcK%2Fimg.png)
+![https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbigQxE%2FbtqBujXdUwD%2FULK7mKyfwdmDujlPJj3gcK%2Fimg.png](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbigQxE%2FbtqBujXdUwD%2FULK7mKyfwdmDujlPJj3gcK%2Fimg.png)
 
 위에서 말했듯이 Choregoraphy방식은 각 App별로 트랜잭션을 관리하는 로직이 있어! 따라서 중간에 만약 transaction을 실패하면 실패한 APP에서 실패한 정보에 대한 event를 발행하고 이를 수신한 쪽에서 보상 로직을 수행하며 Rollback 처리를 하는거야!! 
 
@@ -71,13 +71,13 @@ Orchestartion은 트랜잭션 처리를 위한 SAGA 인스턴스(Manager)가 별
 
 그렇게 진행하다 마지막 트랜잭션이 끝나게되면 Manager를 종료하면서 전체 트랜잭션 처리를 종료해.
 
-[https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fb97dmZ%2FbtqBs0EBjbO%2FEekNphZUWmwKQhza29KJp1%2Fimg.png](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fb97dmZ%2FbtqBs0EBjbO%2FEekNphZUWmwKQhza29KJp1%2Fimg.png)
+![https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fb97dmZ%2FbtqBs0EBjbO%2FEekNphZUWmwKQhza29KJp1%2Fimg.png](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fb97dmZ%2FbtqBs0EBjbO%2FEekNphZUWmwKQhza29KJp1%2Fimg.png)
 
 이러한 형식으로 말야!! 
 
 그런데 만약 실패하게 된다면??
 
-[https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbBHcqB%2FbtqBr8iO9TH%2FNSZPa0sxoVEj57FZt4nBo1%2Fimg.png](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbBHcqB%2FbtqBr8iO9TH%2FNSZPa0sxoVEj57FZt4nBo1%2Fimg.png)
+![https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbBHcqB%2FbtqBr8iO9TH%2FNSZPa0sxoVEj57FZt4nBo1%2Fimg.png](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbBHcqB%2FbtqBr8iO9TH%2FNSZPa0sxoVEj57FZt4nBo1%2Fimg.png)
 
 실패한다면 Manager에서 보상 트랜잭션을 발동하여 일관성을 유지할 수 있게 해!! 이렇게 모든 관리를 해주는 Manager라는 놈이 존재하니 중앙에서 컨트롤 하는 놈을 집중적으로 신경쓰면 되기에 복잡성이 줄어들고 구현과 테스트가 상대적으로 쉬워!! 
 
