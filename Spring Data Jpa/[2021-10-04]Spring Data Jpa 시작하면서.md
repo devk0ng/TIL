@@ -54,7 +54,7 @@ extends JpaRepository<Member, Long> 부분이 있다.
 
 # 공통인터페이스 구성
 
-![](https://backtony.github.io/assets/img/post/jpa/datajpa//1-1.PNG)
+![공통인터페이스](https://backtony.github.io/assets/img/post/jpa/datajpa//1-1.PNG)
 
 <br/><br/><br/>
 
