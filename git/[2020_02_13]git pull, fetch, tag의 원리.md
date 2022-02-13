@@ -98,7 +98,8 @@ git tag -a tag_name -m "message"
 
 git tag 명령어를 실행하게 되면 refs/tags/tag_name 파일이 생성이 돼!
 
-![스크린샷 2022-02-13 오후 11.09.23.png](git%20pull,%20fetch,%20tag%E1%84%8B%E1%85%B4%20%E1%84%8B%E1%85%AF%E1%86%AB%E1%84%85%E1%85%B5%20e3b4cad1a9374f78904a45d02433e81f/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-02-13_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_11.09.23.png)
+<img width="312" alt="스크린샷 2022-02-13 오후 11 09 23" src="https://user-images.githubusercontent.com/31160622/153757435-771524ef-2859-4128-a1c6-2dee99334596.png">
+
 
 이렇게 말이야!!
 
